@@ -1,0 +1,10 @@
+# dependências
+node_modules/
+
+# saída da compilação
+dist/
+.vite/
+
+# sistema operacional
+.DS_Store
+*.log
