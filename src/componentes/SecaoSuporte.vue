@@ -30,7 +30,6 @@ const ASSUNTO = encodeURIComponent('Controle de Tarefas — suporte');
             </svg>
             Enviar e-mail
           </a>
-          <a class="endereco" :href="`mailto:${EMAIL}?subject=${ASSUNTO}`">{{ EMAIL }}</a>
         </div>
       </div>
     </div>
@@ -53,11 +52,6 @@ const ASSUNTO = encodeURIComponent('Controle de Tarefas — suporte');
 
 .acao { display: flex; flex-direction: column; align-items: center; gap: 12px; }
 .acao .botao { padding: 15px 28px; font-size: 1.02rem; }
-.endereco {
-  font-size: .9rem; color: var(--texto-suave); border-bottom: 1px dashed var(--borda-forte, #c9ccd6);
-  padding-bottom: 1px; transition: color .2s ease;
-}
-.endereco:hover { color: var(--acento); }
 
 @media (max-width: 820px) {
   .caixa { grid-template-columns: 1fr; text-align: center; }
