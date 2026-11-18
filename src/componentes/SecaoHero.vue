@@ -56,11 +56,19 @@ onMounted(() => {
       </ul>
     </div>
 
-    <div class="limite palco">
-      <div class="janela" v-parallax="-34">
+    <div class="palco">
+      <div class="janela" v-parallax="-28">
         <div class="janela-barra"><span></span><span></span><span></span><b>Controle de Tarefas</b></div>
-        <img :src="arquivoPublico('capturas/app-claro.webp')" width="2200" height="1375" fetchpriority="high"
-             alt="Quadro do aplicativo com as colunas A fazer, Em andamento e Concluído" />
+        <!-- A imagem aparece em escala 1:1 e e cortada embaixo, como se a janela
+             continuasse. No celular entra um recorte vertical de uma coluna, que
+             e o unico jeito de a interface continuar legivel numa tela estreita. -->
+        <picture>
+          <source media="(max-width: 700px)"
+                  :srcset="arquivoPublico('capturas/hero-celular.webp')" width="744" height="666" />
+          <img :src="arquivoPublico('capturas/hero-amplo.webp')" width="2720" height="1040"
+               fetchpriority="high"
+               alt="Quadro do aplicativo com as colunas A fazer, Em andamento e Concluído" />
+        </picture>
       </div>
     </div>
   </section>
@@ -108,8 +116,18 @@ h1 em { font-style: normal; color: var(--acento); }
   background: var(--verde) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 13 4 4 10-10'/%3E%3C/svg%3E") center/10px no-repeat;
 }
 
-.palco { margin-top: clamp(44px, 6vw, 72px); padding-bottom: 20px; perspective: 1400px; }
-.palco .janela { opacity: 0; transform: translateY(44px) rotateX(7deg); transform-origin: top center; }
+.palco {
+  margin: clamp(44px, 6vw, 72px) auto 0;
+  width: 100%; max-width: 1360px; padding: 0 24px;
+  perspective: 1400px;
+}
+.palco .janela {
+  opacity: 0; transform: translateY(44px) rotateX(7deg); transform-origin: top center;
+  border-bottom: 0; border-radius: 13px 13px 0 0;
+  /* a base da janela se dissolve: sugere que a tela continua abaixo */
+  -webkit-mask-image: linear-gradient(180deg, #000 68%, transparent 100%);
+  mask-image: linear-gradient(180deg, #000 68%, transparent 100%);
+}
 
 .pronto .selo,
 .pronto h1,
@@ -129,5 +147,10 @@ h1 em { font-style: normal; color: var(--acento); }
 @media (max-width: 760px) {
   .hero { padding-top: 112px; }
   .acoes .botao { width: 100%; }
+  .palco { max-width: 420px; }
+  .palco .janela {
+    -webkit-mask-image: linear-gradient(180deg, #000 82%, transparent 100%);
+    mask-image: linear-gradient(180deg, #000 82%, transparent 100%);
+  }
 }
 </style>

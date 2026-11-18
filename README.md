@@ -18,7 +18,7 @@ sem nuvem, sem conta e sem mensalidade.
 
 <br />
 
-<img src="public/capturas/app-claro.webp" alt="Quadro de tarefas do aplicativo" width="860" />
+<img src="public/capturas/hero-amplo.webp" alt="Quadro de tarefas do aplicativo" width="880" />
 
 </div>
 
