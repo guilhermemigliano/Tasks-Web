@@ -28,6 +28,7 @@ onUnmounted(() => window.removeEventListener('scroll', aoRolar));
         <a href="#recursos">Recursos</a>
         <a href="#telas">Telas</a>
         <a href="#perguntas">Perguntas</a>
+        <a href="#suporte">Suporte</a>
         <a class="botao botao-principal compacto" href="#baixar">Baixar grátis</a>
       </nav>
 

@@ -49,6 +49,10 @@ export const PERGUNTAS = [
     resposta: 'Porque o programa não tem certificado de assinatura digital, que é pago e cobrado por ano. O aviso é do sistema operacional, não do aplicativo, e some depois da primeira confirmação.'
   },
   {
+    pergunta: 'Encontrei um problema. Como aviso?',
+    resposta: 'Mande um e-mail para guilhermemigliano@gmail.com contando o que aconteceu. Informe o sistema e a versão do aplicativo (em Ajustes › Sobre) — com isso fica bem mais rápido identificar a causa.'
+  },
+  {
     pergunta: 'Posso usar no trabalho e em casa?',
     resposta: 'Pode instalar em quantos computadores quiser. Como não há sincronização pela nuvem, cada máquina tem a sua própria base; se quiser levar os dados de um lado para o outro, use a exportação em JSON ou copie a pasta de dados.'
   }

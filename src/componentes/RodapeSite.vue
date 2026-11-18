@@ -21,6 +21,7 @@ const REPOSITORIO = 'https://github.com/guilhermemigliano/Tasks-Web';
         <a href="#telas">Telas</a>
         <a href="#baixar">Download</a>
         <a href="#perguntas">Perguntas</a>
+        <a href="#suporte">Suporte</a>
       </nav>
 
       <nav>
