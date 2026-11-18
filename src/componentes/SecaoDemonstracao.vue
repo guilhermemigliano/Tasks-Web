@@ -152,8 +152,8 @@ const concluida = computed(() => concluir.value > 0.6);
   /* a posicao horizontal acompanha --coluna (0, 1 ou 2) e --erguer da o salto */
   translate: calc(var(--coluna, 0) * (100% + 14px)) calc(var(--erguer, 0) * -16px);
   rotate: calc(var(--erguer, 0) * -1.6deg);
-  box-shadow: 0 calc(4px + var(--erguer, 0) * 18px) calc(12px + var(--erguer, 0) * 28px) rgba(18, 20, 30, calc(.07 + var(--erguer, 0) * .13));
-  will-change: translate, rotate;
+  box-shadow: 0 10px 26px rgba(18, 20, 30, .16);   /* fixa: so posicao e giro mudam */
+  will-change: translate;
 }
 .cartao.movel.feito p { text-decoration: line-through; color: var(--texto-fraco); }
 /* concluida, a tarefa perde o alarme do prazo vencido */

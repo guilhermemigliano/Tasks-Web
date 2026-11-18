@@ -52,9 +52,6 @@ onUnmounted(() => {
 
 <template>
   <section id="inicio" class="hero" :class="{ pronto: visivel }">
-    <div class="brilho brilho-a"></div>
-    <div class="brilho brilho-b"></div>
-
     <div class="limite conteudo">
       <span class="selo"><i></i> Versão {{ VERSAO }} · Windows e macOS</span>
 
@@ -121,12 +118,14 @@ onUnmounted(() => {
 .hero { position: relative; padding: 140px 0 0; overflow: hidden; }
 .conteudo { position: relative; text-align: center; max-width: 820px; }
 
-.brilho { position: absolute; border-radius: 50%; filter: blur(90px); opacity: .5; pointer-events: none; }
-.brilho-a { width: 520px; height: 520px; background: #c7c7f8; top: -180px; left: -120px; animation: vagar 17s ease-in-out infinite; }
-.brilho-b { width: 460px; height: 460px; background: #bfe6f7; top: -120px; right: -140px; animation: vagar 21s ease-in-out infinite reverse; }
-@keyframes vagar {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(40px, 30px) scale(1.12); }
+/* Antes eram dois circulos com filter: blur(90px) e animacao infinita. O
+   navegador precisava redesenhar essa superficie borrada a cada quadro, o que
+   derrubava o desempenho em monitores grandes. Um gradiente estatico tem o
+   mesmo efeito visual e e desenhado uma unica vez. */
+.hero {
+  background:
+    radial-gradient(760px 540px at 6% -140px, rgba(186, 186, 245, .62), transparent 62%),
+    radial-gradient(700px 500px at 94% -110px, rgba(173, 223, 245, .58), transparent 62%);
 }
 
 .selo {
@@ -171,9 +170,8 @@ h1 em { font-style: normal; color: var(--acento); }
 .cena::after {
   content: "";
   position: absolute; left: 8%; right: 8%; bottom: -34px; height: 70px;
-  background: radial-gradient(ellipse at center, rgba(91, 91, 214, .22), transparent 70%);
-  filter: blur(26px);
-  opacity: calc(var(--inclina, 0) * .9);
+  background: radial-gradient(ellipse at center, rgba(91, 91, 214, .20), transparent 72%);
+  opacity: calc(var(--inclina, 0) * .9);   /* opacidade e composicao, nao repintura */
   transform: translateZ(-40px);
   pointer-events: none;
 }
@@ -181,12 +179,19 @@ h1 em { font-style: normal; color: var(--acento); }
 .janela {
   border-radius: 14px 14px 0 0; border-bottom: 0; overflow: hidden;
   background: #fff; border: 1px solid var(--borda);
-  /* a sombra acompanha a inclinacao: quanto mais deitada, mais ela se espalha */
-  box-shadow:
-    0 calc(18px + var(--inclina, 0) * 46px) calc(40px + var(--inclina, 0) * 70px) rgba(20, 22, 40, calc(.14 + var(--inclina, 0) * .14)),
-    0 2px 6px rgba(20, 22, 40, .06);
-  -webkit-mask-image: linear-gradient(180deg, #000 72%, transparent 100%);
-  mask-image: linear-gradient(180deg, #000 72%, transparent 100%);
+  /* sombra fixa: animar o raio do box-shadow obriga a repintar a camada
+     inteira a cada quadro, e essa camada tem o tamanho da janela */
+  box-shadow: 0 30px 70px rgba(20, 22, 40, .20), 0 2px 6px rgba(20, 22, 40, .06);
+  position: relative;
+}
+
+/* o desvanecer da base era um mask-image, que o Safari rerasteriza junto com a
+   transformacao 3D; um degrade por cima custa muito menos */
+.janela::after {
+  content: "";
+  position: absolute; inset: auto 0 0 0; height: 28%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0), #fff 92%);
+  pointer-events: none;
 }
 .janela-barra {
   display: flex; align-items: center; gap: 7px; padding: 11px 14px;
@@ -205,7 +210,7 @@ h1 em { font-style: normal; color: var(--acento); }
   background: #fff; border: 1px solid var(--borda); border-radius: 12px;
   padding: 12px 13px; text-align: left;
   transform: translate3d(0, 0, calc(70px + var(--inclina, 0) * 70px)) rotate(-2deg);
-  box-shadow: 0 calc(16px + var(--inclina, 0) * 20px) calc(34px + var(--inclina, 0) * 26px) rgba(20, 22, 40, .22);
+  box-shadow: 0 26px 48px rgba(20, 22, 40, .22);
 }
 .cartao-solto .linha { display: flex; gap: 9px; align-items: flex-start; }
 .cartao-solto p { font-size: .9rem; line-height: 1.35; font-weight: 500; }
@@ -239,10 +244,7 @@ h1 em { font-style: normal; color: var(--acento); }
   .hero { padding-top: 112px; }
   .acoes .botao { width: 100%; }
   .palco { max-width: 420px; }
-  .janela {
-    -webkit-mask-image: linear-gradient(180deg, #000 86%, transparent 100%);
-    mask-image: linear-gradient(180deg, #000 86%, transparent 100%);
-  }
+  .janela::after { height: 16%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
