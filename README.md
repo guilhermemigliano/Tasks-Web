@@ -1,111 +1,126 @@
 <div align="center">
 
-<img src="public/icone-180.png" width="84" alt="Ícone do Controle de Tarefas" />
+<img src="public/icone-180.png" width="88" alt="Ícone do Controle de Tarefas" />
 
-# Controle de Tarefas · site
+# Controle de Tarefas
 
-**Página de divulgação e download do Controle de Tarefas**, um gerenciador de
-projetos e tarefas que roda no próprio computador — sem nuvem, sem conta e sem mensalidade.
+### Seus projetos e tarefas organizados, no seu computador
 
-[![Vue](https://img.shields.io/badge/Vue-3.5-42b883?logo=vue.js&logoColor=white)](https://vuejs.org)
-[![Vite](https://img.shields.io/badge/Vite-6-646cff?logo=vite&logoColor=white)](https://vite.dev)
-[![GitHub Pages](https://img.shields.io/badge/deploy-GitHub%20Pages-24292f?logo=github)](https://guilhermemigliano.github.io/Tasks-Web/)
+Um gerenciador de tarefas de desktop para **Windows** e **macOS** que funciona
+sem nuvem, sem conta e sem mensalidade.
+
+[![Versão](https://img.shields.io/badge/versão-1.0.0-5b5bd6)](https://guilhermemigliano.github.io/Tasks-Web/)
+[![Windows](https://img.shields.io/badge/Windows-10%2B-0078d4?logo=windows&logoColor=white)](https://guilhermemigliano.github.io/Tasks-Web/#baixar)
+[![macOS](https://img.shields.io/badge/macOS-11%2B-000000?logo=apple&logoColor=white)](https://guilhermemigliano.github.io/Tasks-Web/#baixar)
 [![Licença MIT](https://img.shields.io/badge/licença-MIT-blue)](LICENSE)
 
-[**Ver o site**](https://guilhermemigliano.github.io/Tasks-Web/)
+**[⬇︎ Baixar o aplicativo](https://guilhermemigliano.github.io/Tasks-Web/#baixar)**
 
-<img src="public/capturas/quadro-claro.webp" alt="Tela do aplicativo mostrando o quadro de tarefas" width="820" />
+<br />
+
+<img src="public/capturas/quadro-claro.webp" alt="Quadro de tarefas do aplicativo" width="860" />
 
 </div>
 
+<br />
+
+## O que é
+
+A maioria dos gerenciadores de tarefas pede cadastro, exige internet e cobra assinatura
+para liberar o que importa. O **Controle de Tarefas** faz o contrário: é um programa que
+você instala, abre e usa. Os dados ficam num arquivo no seu computador, e só.
+
+A ideia é ser o suficiente para organizar o trabalho sem virar mais uma obrigação:
+projetos de um lado, tarefas do outro, um quadro para ver o andamento e nada além disso.
+
+<br />
+
+## Funcionalidades
+
+### Um quadro para cada projeto
+
+Separe trabalho, casa e estudos. Cada projeto tem as suas próprias tarefas, cor e
+etiquetas, sem misturar nada. A barra lateral mostra quantas tarefas em aberto cada um
+tem, além das visões **Todas as tarefas**, **Para hoje** e **Atrasadas**, que cruzam
+todos os projetos de uma vez.
+
+### Kanban com arrastar e soltar
+
+Mova os cartões entre **A fazer**, **Em andamento** e **Concluído**. A ordem dentro de
+cada coluna também é sua. Quem prefere ver tudo em sequência pode trocar para o modo
+lista a qualquer momento.
+
+### Tudo o que uma tarefa precisa
+
+<img src="public/capturas/tarefa.webp" alt="Janela de detalhes de uma tarefa" width="820" />
+
+Descrição, prazo, prioridade, etiquetas, uma lista de subtarefas com contador de
+progresso e arquivos anexados — tudo numa janela só. Os anexos podem ser arrastados para
+dentro da tarefa: imagens ganham miniatura e abrem no próprio aplicativo, e os demais
+formatos abrem no programa padrão do sistema.
+
+### Prazos que aparecem
+
+Defina data de vencimento e prioridade. O que vence hoje aparece em destaque, o que
+passou do prazo fica em vermelho, e os filtros do topo permitem ver só o que interessa:
+por prioridade, por etiqueta ou por prazo.
+
+### Etiquetas por projeto
+
+<img src="public/capturas/configuracoes.webp" alt="Tela de configurações mostrando as etiquetas de um projeto" width="820" />
+
+Crie etiquetas coloridas digitando vários nomes separados por vírgula, ou escolha entre
+as que já existem com um clique. Cada projeto tem o seu próprio conjunto, então
+*urgente* em Casa é independente de *urgente* em Trabalho. Ao excluir uma etiqueta que
+está em uso, o aplicativo avisa quantas tarefas serão afetadas antes de confirmar.
+
+### Tema claro e escuro
+
+<img src="public/capturas/quadro-escuro.webp" alt="O mesmo quadro no tema escuro" width="820" />
+
+O aplicativo segue o tema do sistema na primeira abertura e pode ser trocado quando
+quiser, por um botão na barra lateral ou pelo atalho de teclado.
+
+### Busca e atalhos
+
+A busca percorre título e descrição de todas as tarefas, em todos os projetos. Os
+atalhos cobrem o uso do dia a dia:
+
+| Atalho | Ação |
+| --- | --- |
+| `Ctrl/Cmd + N` | Nova tarefa |
+| `Ctrl/Cmd + Shift + N` | Novo projeto |
+| `Ctrl/Cmd + F` | Buscar |
+| `Ctrl/Cmd + ,` | Configurações |
+| `Ctrl/Cmd + Shift + T` | Alternar tema |
+
+<br />
+
+## Seus dados são seus
+
+Não há servidor, conta nem sincronização: tudo é gravado num banco **SQLite** dentro da
+pasta do aplicativo — `Application Support` no macOS, `AppData` no Windows — com os
+anexos numa subpasta ao lado.
+
+Para levar tudo para outro computador, basta copiar essa pasta. O menu *Arquivo* também
+exporta um backup completo em JSON, legível por qualquer programa.
+
+<br />
+
+## Disponível para
+
+| Sistema | Requisito | Formatos |
+| --- | --- | --- |
+| **Windows** | Windows 10 ou superior, 64 bits | Instalador e versão portátil |
+| **macOS** | macOS 11 Big Sur ou superior | Apple Silicon e Intel |
+
+**[Escolher a sua versão →](https://guilhermemigliano.github.io/Tasks-Web/#baixar)**
+
+<br />
+
 ---
 
-## O produto
-
-O **Controle de Tarefas** é um aplicativo de desktop para Windows e macOS. A ideia é
-simples: organizar o que precisa ser feito sem depender de internet, de assinatura ou de
-mais uma conta para criar.
-
-| | |
-|---|---|
-| **Projetos separados** | Cada frente de trabalho com suas próprias tarefas, cores e etiquetas |
-| **Quadro Kanban** | Arrastar e soltar entre *A fazer*, *Em andamento* e *Concluído* |
-| **Prazos e prioridades** | Destaque para o que vence hoje e para o que passou do prazo |
-| **Etiquetas por projeto** | Coloridas, criadas na hora, com filtro em um clique |
-| **Anexos** | Arraste arquivos para dentro da tarefa; imagens ganham miniatura |
-| **100% local** | Banco SQLite na sua máquina, funciona offline |
-
-O código do aplicativo fica em repositório privado. Este repositório contém **apenas o site**.
-
-## Este repositório
-
-Site estático de uma página, feito em Vue 3 com Vite. Sem framework de CSS e sem
-dependências além do próprio Vue: a folha de estilos é escrita à mão, as animações de
-entrada usam `IntersectionObserver` através de uma diretiva (`v-revelar`) e as capturas
-de tela são imagens reais do aplicativo em execução.
-
-### Como rodar
-
-Requer [Node.js](https://nodejs.org) 18 ou superior.
-
-```bash
-npm install
-npm run dev       # servidor local em http://localhost:5173
-npm run build     # gera a pasta dist/
-npm run preview   # serve a pasta dist/ para conferência
-```
-
-### Estrutura
-
-```
-src/
-├── componentes/   seções da página (topo, capa, recursos, telas, download, perguntas, rodapé)
-├── dados/         textos e lista de downloads — é aqui que o conteúdo é editado
-├── estilos/       variáveis de cor, tipografia e utilitários
-└── utilitarios/   diretiva de animação e resolução de caminhos
-public/
-├── capturas/      imagens do aplicativo em WebP
-└── ícones e imagem de compartilhamento
-```
-
-### Editar o conteúdo
-
-Quase todo o texto vive em dois arquivos, sem precisar mexer nos componentes:
-
-- `src/dados/recursos.js` — os seis cartões de recursos e as perguntas frequentes
-- `src/dados/downloads.js` — as versões disponíveis, os nomes dos arquivos e os avisos de cada sistema
-
-### Links de download
-
-Os instaladores não ficam no repositório: o GitHub recusa arquivos acima de 100 MB e os
-`.dmg` passam disso. Depois de hospedá-los, informe o endereço da pasta:
-
-```js
-// src/dados/downloads.js
-export const BASE = 'https://exemplo.com/downloads';
-```
-
-Enquanto essa linha estiver vazia, os botões aparecem como **Em breve** em vez de levarem
-o visitante a um link quebrado.
-
-### Atualizar as capturas de tela
-
-As imagens em `public/capturas/` são da interface real, com dados de exemplo, em
-1920×1200 e formato WebP. Para trocá-las, mantenha os mesmos nomes de arquivo e a mesma
-proporção — o restante do layout se ajusta sozinho.
-
-## Publicação
-
-A cada push na branch `main` que altere arquivos do site, o workflow
-[`publicar-site.yml`](.github/workflows/publicar-site.yml) compila o projeto e publica no
-GitHub Pages.
-
-Para ligar, uma única vez: **Settings › Pages › Source: _GitHub Actions_**.
-
-> O caminho base do Vite (`/Tasks-Web/`) acompanha o nome do repositório. Ao renomear o
-> repositório, ajuste `base` em `vite.config.js`, senão o site publicado não encontra os
-> próprios arquivos.
-
-## Licença
-
-[MIT](LICENSE) — Guilherme Migliano
+<div align="center">
+<sub>Este repositório hospeda o site de divulgação do aplicativo.</sub><br />
+<sub>Feito por <a href="https://github.com/guilhermemigliano">Guilherme Migliano</a> · <a href="LICENSE">MIT</a></sub>
+</div>
