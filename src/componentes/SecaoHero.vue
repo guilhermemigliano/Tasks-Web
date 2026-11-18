@@ -57,9 +57,9 @@ onMounted(() => {
     </div>
 
     <div class="limite palco">
-      <div class="janela flutua">
+      <div class="janela" v-parallax="-34">
         <div class="janela-barra"><span></span><span></span><span></span><b>Controle de Tarefas</b></div>
-        <img :src="arquivoPublico('capturas/quadro-claro.webp')" width="1920" height="1200"
+        <img :src="arquivoPublico('capturas/app-claro.webp')" width="2200" height="1375" fetchpriority="high"
              alt="Quadro do aplicativo com as colunas A fazer, Em andamento e Concluído" />
       </div>
     </div>
@@ -124,11 +124,7 @@ h1 em { font-style: normal; color: var(--acento); }
   transition: opacity .9s ease .3s, transform 1s cubic-bezier(.22,.68,.3,1) .3s;
 }
 
-.flutua { animation: flutuar 7s ease-in-out 1.6s infinite; }
-@keyframes flutuar {
-  0%, 100% { translate: 0 0; }
-  50% { translate: 0 -10px; }
-}
+.palco .janela { translate: 0 var(--parallax, 0); }
 
 @media (max-width: 760px) {
   .hero { padding-top: 112px; }

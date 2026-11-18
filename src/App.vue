@@ -1,6 +1,7 @@
 <script setup>
 import BarraTopo from './componentes/BarraTopo.vue';
 import SecaoHero from './componentes/SecaoHero.vue';
+import SecaoDemonstracao from './componentes/SecaoDemonstracao.vue';
 import SecaoRecursos from './componentes/SecaoRecursos.vue';
 import SecaoCapturas from './componentes/SecaoCapturas.vue';
 import SecaoDownloads from './componentes/SecaoDownloads.vue';
@@ -12,6 +13,7 @@ import RodapeSite from './componentes/RodapeSite.vue';
   <BarraTopo />
   <main>
     <SecaoHero />
+    <SecaoDemonstracao />
     <SecaoRecursos />
     <SecaoCapturas />
     <SecaoDownloads />

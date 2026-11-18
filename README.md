@@ -18,7 +18,7 @@ sem nuvem, sem conta e sem mensalidade.
 
 <br />
 
-<img src="public/capturas/quadro-claro.webp" alt="Quadro de tarefas do aplicativo" width="860" />
+<img src="public/capturas/app-claro.webp" alt="Quadro de tarefas do aplicativo" width="860" />
 
 </div>
 
@@ -67,7 +67,7 @@ por prioridade, por etiqueta ou por prazo.
 
 ### Etiquetas por projeto
 
-<img src="public/capturas/configuracoes.webp" alt="Tela de configurações mostrando as etiquetas de um projeto" width="820" />
+<img src="public/capturas/etiquetas.webp" alt="Tela de configurações mostrando as etiquetas de um projeto" width="820" />
 
 Crie etiquetas coloridas digitando vários nomes separados por vírgula, ou escolha entre
 as que já existem com um clique. Cada projeto tem o seu próprio conjunto, então
@@ -76,7 +76,7 @@ está em uso, o aplicativo avisa quantas tarefas serão afetadas antes de confir
 
 ### Tema claro e escuro
 
-<img src="public/capturas/quadro-escuro.webp" alt="O mesmo quadro no tema escuro" width="820" />
+<img src="public/capturas/app-escuro.webp" alt="O mesmo quadro no tema escuro" width="820" />
 
 O aplicativo segue o tema do sistema na primeira abertura e pode ser trocado quando
 quiser, por um botão na barra lateral ou pelo atalho de teclado.
@@ -122,5 +122,5 @@ exporta um backup completo em JSON, legível por qualquer programa.
 
 <div align="center">
 <sub>Este repositório hospeda o site de divulgação do aplicativo.</sub><br />
-<sub>Feito por <a href="https://github.com/guilhermemigliano">Guilherme Migliano</a> · <a href="LICENSE">MIT</a></sub>
+<sub>© 2026 Task Manager · <a href="LICENSE">MIT</a></sub>
 </div>

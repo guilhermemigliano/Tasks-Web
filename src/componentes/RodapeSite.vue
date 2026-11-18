@@ -31,7 +31,7 @@ const REPOSITORIO = 'https://github.com/guilhermemigliano/Tasks-Web';
     </div>
 
     <div class="limite base">
-      <small>© {{ ano }} Guilherme Migliano. Feito com Electron e SQLite.</small>
+      <small>© {{ ano }} Task Manager</small>
       <small>Windows 10+ · macOS 11+</small>
     </div>
   </footer>
