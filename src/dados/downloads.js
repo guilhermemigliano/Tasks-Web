@@ -1,14 +1,15 @@
 /**
  * Enderecos dos instaladores.
  *
- * COMO ATUALIZAR: suba os arquivos para o servico de hospedagem escolhido e
- * troque BASE pelo endereco da pasta onde eles ficaram. Os nomes abaixo sao os
- * mesmos que o `npm run dist:win` e o `npm run dist:mac` geram em app/dist/.
+ * Os arquivos ficam na aba Releases do repositorio publico Tasks-Releases.
+ * O trecho "latest/download" sempre aponta para a release mais recente, entao
+ * ao lancar uma versao nova basta publicar a release com os MESMOS nomes de
+ * arquivo abaixo (sem numero de versao) e atualizar VERSAO e os tamanhos.
  *
- * Enquanto BASE estiver vazio, os botoes aparecem desativados com o aviso de
+ * Se BASE ficar vazio, os botoes aparecem desativados com o aviso de
  * "em breve", em vez de levarem o visitante para um link quebrado.
  */
-export const BASE = '';
+export const BASE = 'https://github.com/guilhermemigliano/Tasks-Releases/releases/latest/download';
 
 export const VERSAO = '1.0.0';
 
@@ -23,16 +24,16 @@ export const SISTEMAS = [
         titulo: 'Instalador',
         resumo: 'Instala o programa e cria o atalho na área de trabalho e no menu Iniciar.',
         recomendado: true,
-        arquivo: `Controle-de-Tarefas-Instalador-${'1.0.0'}.exe`,
-        tamanho: '85 MB'
+        arquivo: 'Controle-de-Tarefas-Windows-Instalador.exe',
+        tamanho: '88 MB'
       },
       {
         id: 'win-portatil',
         titulo: 'Portátil',
         resumo: 'Não instala nada: abre com dois cliques. Bom para levar no pendrive.',
         recomendado: false,
-        arquivo: `Controle-de-Tarefas-Portatil-${'1.0.0'}.exe`,
-        tamanho: '85 MB'
+        arquivo: 'Controle-de-Tarefas-Windows-Portatil.exe',
+        tamanho: '88 MB'
       }
     ],
     aviso: {
@@ -50,16 +51,16 @@ export const SISTEMAS = [
         titulo: 'Apple Silicon',
         resumo: 'Para Macs com chip M1, M2, M3 ou mais novo.',
         recomendado: true,
-        arquivo: `Controle-de-Tarefas-${'1.0.0'}-arm64.dmg`,
-        tamanho: '103 MB'
+        arquivo: 'Controle-de-Tarefas-Mac-AppleSilicon.dmg',
+        tamanho: '107 MB'
       },
       {
         id: 'mac-intel',
         titulo: 'Intel',
         resumo: 'Para Macs com processador Intel.',
         recomendado: false,
-        arquivo: `Controle-de-Tarefas-${'1.0.0'}-x64.dmg`,
-        tamanho: '107 MB'
+        arquivo: 'Controle-de-Tarefas-Mac-Intel.dmg',
+        tamanho: '112 MB'
       }
     ],
     aviso: {
